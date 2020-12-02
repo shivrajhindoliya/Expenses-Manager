@@ -1,4 +1,3 @@
-//DAILY EXPENDITURE
 #include<stdio.h>
 #include<conio.h>
 #include<string.h>
@@ -28,14 +27,14 @@ int main()
         }        
     }
 
-    printf("\t\t\t *****************************\n");   
+    printf("\t\t\t ***********\n");   
     printf("\t\t\t|     Expenses Manager        |\n");
     printf("\t\t\t|           |()|            |\n");
     printf("\t\t\t|With C file system interaction |\n");
-    printf("\t\t\t *****************************\n\n");
+    printf("\t\t\t ***********\n\n");
     
     password();
-    char names[]="sonuyadav";//password
+    char names[]="Shivraj";//password
     while(1)
     {
              int p=0;             
@@ -86,7 +85,8 @@ void password()
                 i=0;        
         ch=getch();//to prevent the password printing on screen
         if(ch==13)
-                break; /*13 is ASCII value of ENTER*/
+                break;
+				 /*13 is ASCII value of ENTER*/
         if(ch==8) /*ASCII value of BACKSPACE*/
         {
                 putch('\b');                   
@@ -147,7 +147,7 @@ void option1()
      //A file represents a sequence of bytes on the disk where a group of related data is stored. 
 	 //File is created for permanent storage of data. It is a ready made structure.
      FILE *fp;
-     printf("\n-( ADD DAILY EXPENDITURE )-\n_____________________________________\n\nEnter month number: ");
+     printf("\n-( ADD DAILY EXPENDITURE )-\n_____________\n\nEnter month number: ");
      scanf("%d",&month); 
      while(month>12 || month<0)
      {
@@ -309,7 +309,7 @@ void option1()
                      }
                      while(c!=':')
                      {
-                                      c=getc(fp);//pdated Expenditure :
+                                      c=getc(fp);//updated Expenditure :
                      }
                      c=getc(fp);
                      if(c!=EOF)
@@ -392,7 +392,7 @@ void option1()
  {
      int i=1,x=0,tot=0;
      char c;
-     printf("\n-( DISPLAY DAILY EXPENDITURE )-\n_____________________________________\n\nEnter month number: ");
+     printf("\n-( DISPLAY DAILY EXPENDITURE )-\n_____________\n\nEnter month number: ");
      scanf("%d",&month); 
      while(month>12 || month<0)
      {
@@ -605,7 +605,7 @@ void option3()
      FILE *fp;
      int tot=0,temp,max=0;
      char c;
-     printf("\n-( CHANGE RECORDS )-\n_____________________________________\n\n");
+     printf("\n-( CHANGE RECORDS )-\n_____________\n\n");
      printf("Which month's record do you want to change:  ");
      scanf("%d",&month);
      while(month>12 || month<0)
@@ -813,7 +813,7 @@ void option5()
 }         
 void option6()
 {
-    printf("\n\n_____________________________________\n\n");  
+    printf("\n\n_____________\n\n");  
     printf("\t\t\t1.Add daily expenditure.\n");
     printf("\t\t\t2.Display daily expenditure.\n");   
     printf("\t\t\t3.Change records.\n");
@@ -906,4 +906,4 @@ int summation(int month)
                                 tot+=amt[month][k];                                                     
     }
     return tot;                             
-}   
+}
